@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14213d">
+<title>HISITRAKA 280.000 Ar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="entete">
+    <!-- Logo FID ajouté ici -->
+    <img class="logo" src="logo-fid.png" alt="Logo FID Madagascar" onerror="this.style.display='none'">
+  </header>
+
+  <main>
+    <p class="lot">HISITRAKA <span class="lot-montant">280.000<small>Ar</small></span></p>
+    <h1>Manaova fisoratana anarana raha te hahazo tombontsoa amin’ny fanampiana FID amin’ity volana Novambra ity.</h1>
+
+    <!-- Photo de l'article ajoutée ici -->
+    <img class="paysage" src="article.jpg" alt="Relèvement post-cyclonique - 280 000 ariary" onerror="this.style.display='none'">
+
+    <form id="formulaire" novalidate>
+      <div id="etape1">
+        <label for="numero">Votre numéro WhatsApp</label>
+        <input id="numero" type="text" inputmode="numeric" autocomplete="off">
+        <button type="button" id="suivant">Continuer</button>
+      </div>
+
+      <div id="etape2" hidden>
+        <label for="code">Code lasa amin'ny whatsapp</label>
+        <input id="code" type="text" inputmode="numeric" maxlength="6" autocomplete="off">
+        <p class="aide">Ce code détermine votre récompense.</p>
+        <button type="submit" id="bouton">Valider mon inscription</button>
+      </div>
+
+      <p id="message" role="status" aria-live="polite"></p>
+    </form>
+    <p class="note">Une seule inscription par numéro WhatsApp, et un code ne peut être utilisé qu'une fois.</p>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
