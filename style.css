@@ -1,0 +1,40 @@
+:root{--fond:#14213d;--or:#fca311;--texte:#ffffff;--doux:#c5cce0;--carte:#1c2c52;--erreur:#ff8a80;--ok:#7be0a4}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html,body{margin:0}
+body{background:var(--fond);color:var(--texte);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+
+/* Mise en page téléphone : une colonne étroite, centrée même sur ordinateur */
+.page{
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  min-height:100dvh;
+  padding:16px 20px calc(32px + env(safe-area-inset-bottom));
+  padding-top:calc(16px + env(safe-area-inset-top));
+}
+
+/* Logo à gauche */
+.entete{display:flex;align-items:center;justify-content:flex-start;margin-bottom:20px}
+.logo{height:44px;width:auto;max-width:140px;object-fit:contain;display:block}
+
+.lot{font-size:clamp(2.6rem,13vw,3.6rem);font-weight:800;color:var(--or);line-height:1;margin:0}
+.lot small{font-size:.4em;font-weight:700;margin-left:6px;color:var(--texte)}
+h1{font-size:1.25rem;font-weight:600;margin:12px 0 4px}
+.date{color:var(--doux);margin:0 0 18px}
+
+/* Photo paysage sous la date */
+.paysage{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin:0 0 22px}
+
+form{background:var(--carte);border-radius:14px;padding:20px}
+label{display:block;font-weight:600;margin-bottom:8px}
+input{width:100%;font-size:1.1rem;padding:14px;min-height:50px;border-radius:10px;border:2px solid transparent;background:#fff;color:#14213d}
+input:focus-visible{outline:none;border-color:var(--or)}
+button{margin-top:16px;width:100%;min-height:50px;font-size:1.05rem;font-weight:700;padding:14px;border:0;border-radius:10px;background:var(--or);color:#14213d;cursor:pointer}
+button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+button:disabled{opacity:.6;cursor:wait}
+#message{min-height:1.4em;margin:14px 0 0;font-weight:600}
+#message.ok{color:var(--ok)}
+#message.erreur{color:var(--erreur)}
+.aide{color:var(--doux);font-size:.9rem;margin:8px 0 0}
+.note{color:var(--doux);font-size:.9rem;margin-top:16px}
